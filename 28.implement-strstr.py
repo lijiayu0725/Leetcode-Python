@@ -19,5 +19,5 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.strStr('aaaa', 'b')
+    result = solution.strStr('aaaa', 'aaa')
     print(result)
