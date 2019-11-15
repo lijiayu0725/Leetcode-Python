@@ -1,23 +1,22 @@
 from typing import *
 
 class Solution:
-    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        if nums is None or len(nums) == 0:
-            return []
-        nums = sorted(nums)
-        results = []
-        self.subsetshelper(nums, results, [], 0)
-        return results
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        res = []
+        if nums == []:
+            return res
+        self.dfs(nums, 0, [], res)
+        return res
 
-    def subsetshelper(self, nums: List[int], results: List[List[int]], subset: List[int], startIndex: int):
-        results.append(subset.copy())
-        for i in range(startIndex, len(nums)):
-            subset.append(nums[i])
-            self.subsetshelper(nums, results, subset, i + 1)
-            subset.pop()
+    def dfs(self, nums, start, cur, res):
+        res.append(cur.copy())
+        for i in range(start, len(nums)):
+            cur.append(nums[i])
+            self.dfs(nums, i + 1, cur, res)
+            cur.pop()
 
 
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.subsetsWithDup([1,2,2])
+    result = solution.subsetsWithDup([1,2])
     print(result)

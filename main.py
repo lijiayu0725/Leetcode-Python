@@ -1,24 +1,21 @@
-from typing import *
+def dfs(nums, deep, cur, res, used):
+    if deep == len(nums):
+        res.append(cur.copy())
+        return
+    for i, n in enumerate(nums):
+        if used[i]:
+            continue
+        used[i] = True
+        cur.append(n)
+        dfs(nums, deep + 1, cur, res, used)
+        cur.pop()
+        used[i] = False
 
-class Solution:
-    def findMin(self, nums: List[int]) -> int:
-        if nums is None or len(nums) == 0:
-            return -1
-        start, end = 0, len(nums) - 1
-        target = nums[-1]
-        while start + 1 < end:
-            mid = (start + end) // 2
-            if nums[mid] < target:
-                end = mid
-            elif nums[mid] > target:
-                start = mid
-            else:
-                end = mid
-        return min(nums[start], nums[end])
-
+def permu(nums):
+    res = []
+    dfs(nums, 0, [], res, [False] * 3)
+    return res
 
 
 if __name__ == '__main__':
-    solution = Solution()
-    result = solution.findMin([1,2,3,4,5,6,7])
-    print(result)
+    print(permu([1,2,3]))

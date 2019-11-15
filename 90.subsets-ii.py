@@ -2,21 +2,20 @@ from typing import *
 
 class Solution:
     def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        if nums is None or len(nums) == 0:
+        if len(nums) == 0:
             return []
-        nums = sorted(nums)
-        results = []
-        self.subsetshelper(nums, results, [], 0)
-        return results
+        res = []
+        self.dfs(nums, 0, [], res)
+        return res
 
-    def subsetshelper(self, nums: List[int], results: List[List[int]], subset: List[int], startIndex: int):
-        results.append(subset.copy())
-        for i in range(startIndex, len(nums)):
-            if i != startIndex and nums[i] == nums[i - 1]:
+    def dfs(self, nums: List[int], start: int, cur: List[int], res: List[List[int]]):
+        res.append(cur.copy())
+        for i in range(start, len(nums)):
+            if i > start and nums[i - 1] == nums[i]:
                 continue
-            subset.append(nums[i])
-            self.subsetshelper(nums, results, subset, i + 1)
-            subset.pop()
+            cur.append(nums[i])
+            self.dfs(nums, i + 1, cur, res)
+            cur.pop()
 
 
 if __name__ == '__main__':
