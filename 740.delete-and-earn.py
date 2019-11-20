@@ -20,7 +20,6 @@ class Solution:
             return dp[-1]
 
 
-
 if __name__ == '__main__':
     solution = Solution()
     res = solution.deleteAndEarn([2, 2, 3, 3, 3, 4])

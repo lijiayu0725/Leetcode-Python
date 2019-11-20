@@ -1,12 +1,6 @@
 from typing import *
 
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
-
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -14,7 +8,7 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    def preorderTraversal(self, root: TreeNode) -> List[int]:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
         WHITE, GRAY = 0, 1
         res = []
         stack = [(WHITE, root)]
@@ -23,15 +17,18 @@ class Solution:
             if node is None:
                 continue
             if color == WHITE:
+                stack.append((GRAY, node))
                 stack.append((WHITE, node.right))
                 stack.append((WHITE, node.left))
-                stack.append((GRAY, node))
             else:
                 res.append(node.val)
         return res
 
-
 if __name__ == '__main__':
     solution = Solution()
-    result = solution
-    print(result)
+    root = TreeNode(2)
+    root.left = TreeNode(1)
+    root.right = TreeNode(3)
+    res = solution.inorderTraversal(root)
+    print(res)
+

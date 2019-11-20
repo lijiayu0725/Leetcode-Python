@@ -8,12 +8,19 @@ class Node:
 
 class Solution:
     def postorder(self, root: 'Node') -> List[int]:
+        WHITE, GRAY = 0, 1
         res = []
-        if root is None:
-            return res
-        for i in range(len(root.children)):
-            res += self.postorder(root.children[i])
-        res.append(root.val)
+        stack = [(WHITE, root)]
+        while stack:
+            color, node = stack.pop()
+            if node is None:
+                continue
+            if color == WHITE:
+                stack.append((GRAY, node))
+                for child in reversed(node.children):
+                    stack.append((WHITE, child))
+            else:
+                res.append(node.val)
         return res
 
 

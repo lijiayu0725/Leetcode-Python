@@ -1,21 +1,24 @@
 from typing import *
 
-
-class TreeNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
 
 class Solution:
-    def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
-        if p is None and q is not None:
-            return False
-        elif p is not None and q is None:
-            return False
-        elif p is None and q is None:
-            return True
-        else:
-            left = self.isSameTree(p.left, q.left)
-            right = self.isSameTree(p.right, q.right)
-            return left and right and p.val == q.val
+    def preorder(self, root: 'Node') -> List[int]:
+        WHITE, GRAY = 0, 1
+        res = []
+        stack = [(WHITE, root)]
+        while stack:
+            color, node = stack.pop()
+            if node is None:
+                continue
+            if color == WHITE:
+                for child in reversed(node.children):
+                    stack.append((WHITE, child))
+                stack.append((GRAY, node))
+            else:
+                res.append(node.val)
+        return res
