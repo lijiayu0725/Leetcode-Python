@@ -2,7 +2,6 @@ from typing import *
 
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        # dp[i] : 到第i个数的最大子序列和
         dp = [0 for _ in range(len(nums))]
         dp[0] = nums[0]
         for i in range(1, len(nums)):

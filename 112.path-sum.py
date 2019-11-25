@@ -10,10 +10,15 @@ class TreeNode:
 class Solution:
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
         if root is None:
-            if sum == 0:
-                return True
-            else:
-                return False
+            return False
+        if root.left is None and root.right is None:
+            return sum == root.val
         left = self.hasPathSum(root.left, sum - root.val)
         right = self.hasPathSum(root.right, sum - root.val)
         return left or right
+
+
+
+
+
+
