@@ -2,31 +2,31 @@ from typing import *
 
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
-        row = len(matrix)
-        col = len(matrix[0])
         left = matrix[0][0]
-        right = matrix[row - 1][col - 1]
+        right = matrix[-1][-1]
         while left + 1 < right:
             mid = (left + right) // 2
-            count = self.findSmallerThan(matrix, mid, row, col)
+            count = self.findSmallerThan(matrix, mid)
             if count < k:
                 left = mid
             elif count > k:
                 right = mid
             else:
                 right = mid
-        if self.findSmallerThan(matrix, left, row, col) >= k:
+        if self.findSmallerThan(matrix, left) >= k:
             return left
         else:
             return right
 
-    def findSmallerThan(self, matrix: List[List[int]], mid: int, row: int, col: int):
+    def findSmallerThan(self, matrix: List[List[int]], mid: int):
+        row = len(matrix)
+        col = len(matrix[0])
         i = 0
         j = col - 1
         count = 0
         while i < row and j >= 0:
             if matrix[i][j] <= mid:
-                count += j
+                count += j + 1
                 i += 1
             else:
                 j -= 1
@@ -35,9 +35,6 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    matrix = [
-       [ 1,  2],
-       [1, 3]
-    ]
-    res = solution.kthSmallest(matrix, 1)
+    matrix = [[1,5,9],[10,11,13],[12,13,15]]
+    res = solution.kthSmallest(matrix, 8)
     print(res)

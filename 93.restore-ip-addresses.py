@@ -24,7 +24,8 @@ class Solution:
             segment.pop()
 
 
+
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.restoreIpAddresses("19216827")
+    res = solution.restoreIpAddresses("101211")
     print(res)
