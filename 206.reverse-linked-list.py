@@ -6,16 +6,9 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        if head is None:
+        if head is None or head.next is None:
             return head
-        if head.next is None:
-            return head
-        first = head
-        second = head.next
-        first.next = None
-        while second:
-            tmp = second.next
-            second.next = first
-            first = second
-            second = tmp
-        return first
+        newList = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return newList
