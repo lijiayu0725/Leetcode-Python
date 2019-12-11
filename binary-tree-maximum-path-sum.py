@@ -1,10 +1,12 @@
 from typing import *
 
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     def maxPathSum(self, root: TreeNode) -> int:
@@ -23,6 +25,7 @@ class Solution:
         any2any = max(any2any, max(left_root2any, 0) + root.val + max(right_root2any, 0))
 
         return root2any, any2any
+
 
 if __name__ == '__main__':
     pass

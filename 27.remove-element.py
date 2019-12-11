@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         slow = 0
@@ -11,6 +12,7 @@ class Solution:
             else:
                 slow += 1
         return fast + 1
+
 
 if __name__ == '__main__':
     solution = Solution()

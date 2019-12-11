@@ -6,6 +6,7 @@ class Node:
         self.val = val
         self.children = children
 
+
 class Solution:
     def postorder(self, root: 'Node') -> List[int]:
         WHITE, GRAY = 0, 1
@@ -22,6 +23,3 @@ class Solution:
             else:
                 res.append(node.val)
         return res
-
-
-

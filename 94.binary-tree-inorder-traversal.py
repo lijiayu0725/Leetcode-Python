@@ -1,11 +1,13 @@
 from typing import *
 
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
@@ -24,6 +26,7 @@ class Solution:
                 res.append(node.val)
         return res
 
+
 if __name__ == '__main__':
     solution = Solution()
     root = TreeNode(2)
@@ -31,4 +34,3 @@ if __name__ == '__main__':
     root.right = TreeNode(3)
     res = solution.inorderTraversal(root)
     print(res)
-

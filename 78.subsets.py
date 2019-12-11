@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         res = []
@@ -18,5 +19,5 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.subsetsWithDup([1,2])
+    result = solution.subsetsWithDup([1, 2])
     print(result)

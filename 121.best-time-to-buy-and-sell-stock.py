@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if len(prices) == 0:
@@ -12,9 +13,9 @@ class Solution:
         dp[0][0] = 0
         dp[0][1] = -prices[0]
 
-    # dp[i][1][0] = max(dp[i - 1][1][0], dp[i - 1][1][1] + prices[i])
-    # dp[i][1][1] = max(dp[i - 1][1][1], dp[i - 1][0][0] - prices[i])
-    # = max(dp[i - 1][1][1], -prices[i])
+        # dp[i][1][0] = max(dp[i - 1][1][0], dp[i - 1][1][1] + prices[i])
+        # dp[i][1][1] = max(dp[i - 1][1][1], dp[i - 1][0][0] - prices[i])
+        # = max(dp[i - 1][1][1], -prices[i])
         # ->
 
         for i in range(1, len(prices)):
@@ -22,7 +23,8 @@ class Solution:
             dp[i][1] = max(dp[i - 1][1], -prices[i])
         return dp[-1][0]
 
+
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.maxProfit([7,6,4,3,1])
+    res = solution.maxProfit([7, 6, 4, 3, 1])
     print(res)

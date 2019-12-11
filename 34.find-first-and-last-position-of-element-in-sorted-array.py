@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         if len(nums) == 0:
@@ -38,7 +39,8 @@ class Solution:
             res.append(-1)
         return res
 
+
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.searchRange([1,2,3,3,3,4,5], 3)
+    res = solution.searchRange([1, 2, 3, 3, 3, 4, 5], 3)
     print(res)

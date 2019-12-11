@@ -1,5 +1,3 @@
-from typing import *
-
 class Solution:
     def reverse(self, x: int) -> int:
         tmp = str(x)
@@ -10,6 +8,7 @@ class Solution:
         if int(tmp) < -2 ** 31 or int(tmp) > 2 ** 31 - 1:
             return 0
         return int(tmp)
+
 
 if __name__ == '__main__':
     solution = Solution()

@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
         left = matrix[0][0]
@@ -35,6 +36,6 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    matrix = [[1,5,9],[10,11,13],[12,13,15]]
+    matrix = [[1, 5, 9], [10, 11, 13], [12, 13, 15]]
     res = solution.kthSmallest(matrix, 8)
     print(res)

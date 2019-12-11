@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         if len(nums) == 0:
@@ -24,7 +25,8 @@ class Solution:
             cur.pop()
             used[i] = False
 
+
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.permuteUnique([1,1,1,2])
+    res = solution.permuteUnique([1, 1, 1, 2])
     print(res)

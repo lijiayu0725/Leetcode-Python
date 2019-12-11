@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def searchMatrix_1(self, matrix: List[List[int]], target: int) -> bool:
         if matrix is None or len(matrix) == 0 or len(matrix[0]) == 0:
@@ -31,7 +32,6 @@ class Solution:
             return True
         return False
 
-
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         if matrix is None or len(matrix) == 0 or len(matrix[0]) == 0:
             return False
@@ -53,5 +53,5 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.searchMatrix([[1,3,5,7], [10,11,16,20], [23,30,34,50]], 1)
+    result = solution.searchMatrix([[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 50]], 1)
     print(result)

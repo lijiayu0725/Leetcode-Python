@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         if nums is None or len(nums) == 0:
@@ -22,5 +23,5 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.search([1,2,3,4,5], 12)
+    result = solution.search([1, 2, 3, 4, 5], 12)
     print(result)

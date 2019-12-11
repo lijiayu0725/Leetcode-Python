@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def maxProfit(self, k: int, prices: List[int]) -> int:
         if k == 0:
@@ -40,10 +41,7 @@ class Solution:
         return dp[-1][0]
 
 
-
-
-
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.maxProfit(2, [3,2,6,5,0,3])
+    res = solution.maxProfit(2, [3, 2, 6, 5, 0, 3])
     print(res)

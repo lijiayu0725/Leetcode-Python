@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def countSquares(self, matrix: List[List[int]]) -> int:
         dp = [[0] * len(matrix[0]) for _ in range(len(matrix))]

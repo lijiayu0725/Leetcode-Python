@@ -1,5 +1,3 @@
-from typing import *
-
 def guess(num):
     k = 6
     if num < k:
@@ -8,6 +6,7 @@ def guess(num):
         return -1
     else:
         return 0
+
 
 class Solution(object):
     def guessNumber(self, n):

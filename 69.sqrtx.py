@@ -1,5 +1,3 @@
-from typing import *
-
 class Solution:
     def mySqrt(self, x: int) -> int:
         start, end = 0, x // 2 + 1

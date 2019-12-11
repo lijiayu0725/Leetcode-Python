@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def getRow(self, rowIndex: int) -> List[int]:
         row = [1]
@@ -8,6 +9,7 @@ class Solution:
                 row[i] = row[i - 1] + row[i]
             row.append(1)
         return row
+
 
 if __name__ == '__main__':
     solution = Solution()

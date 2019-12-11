@@ -1,10 +1,12 @@
 from typing import *
 
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
@@ -25,5 +27,3 @@ class Solution:
                     queue.insert(0, node.right)
             result.append(res)
         return result
-
-

@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         res = []
@@ -18,8 +19,7 @@ class Solution:
                 cur.pop()
 
 
-
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.combinationSum([2,3,4], 8)
+    res = solution.combinationSum([2, 3, 4], 8)
     print(res)

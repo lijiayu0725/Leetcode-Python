@@ -4,6 +4,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         len1 = self.lenth(headA)
@@ -18,7 +19,6 @@ class Solution:
             longList = longList.next
             shortList = shortList.next
         return longList
-
 
     def lenth(self, head: ListNode) -> int:
         count = 0

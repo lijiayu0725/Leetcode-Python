@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def nextGreatestLetter(self, letters: List[str], target: str) -> str:
         start, end = 0, len(letters) - 1

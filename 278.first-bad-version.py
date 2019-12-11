@@ -1,7 +1,6 @@
-from typing import *
-
 def isBadVersion(n):
     return n > 6
+
 
 class Solution:
     def firstBadVersion(self, n):

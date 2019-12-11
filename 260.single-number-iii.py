@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
         if len(nums) == 0:

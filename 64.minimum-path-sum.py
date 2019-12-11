@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         m = len(grid[-1])
@@ -19,9 +20,9 @@ class Solution:
 if __name__ == '__main__':
     solution = Solution()
     nums = [
-        [1,3,1],
-        [1,5,1],
-        [4,2,1]
+        [1, 3, 1],
+        [1, 5, 1],
+        [4, 2, 1]
     ]
     result = solution.minPathSum(nums)
     print(result)

@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         if len(digits) == 0:

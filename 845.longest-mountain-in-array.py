@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def longestMountain(self, A: List[int]) -> int:
         res = up = down = 0
@@ -13,7 +14,8 @@ class Solution:
                 res = max(res, up + down + 1)
         return res
 
+
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.longestMountain([2,1,4,7,7,7,3,2,5])
+    res = solution.longestMountain([2, 1, 4, 7, 7, 7, 3, 2, 5])
     print(res)

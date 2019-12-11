@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         if nums is None or len(nums) == 0:

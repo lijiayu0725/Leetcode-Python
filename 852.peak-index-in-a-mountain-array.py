@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def peakIndexInMountainArray(self, A: List[int]) -> int:
         if A is None or len(A) < 3:
@@ -22,5 +23,5 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.peakIndexInMountainArray([0,1,2,0])
+    result = solution.peakIndexInMountainArray([0, 1, 2, 0])
     print(result)

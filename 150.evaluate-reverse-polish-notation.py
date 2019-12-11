@@ -1,10 +1,11 @@
 from typing import *
 
+
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack = []
         for s in tokens:
-            if s not in['+', '-', '*', '/']:
+            if s not in ['+', '-', '*', '/']:
                 stack.append(int(s))
             else:
                 num1 = stack.pop()

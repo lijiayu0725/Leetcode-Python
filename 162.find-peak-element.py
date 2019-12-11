@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
         if nums is None or len(nums) == 0:
@@ -29,7 +30,8 @@ class Solution:
             return 0
         return 0
 
+
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.findPeakElement([2,3,4])
+    result = solution.findPeakElement([2, 3, 4])
     print(result)

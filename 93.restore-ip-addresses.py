@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         if len(s) > 12:
@@ -22,7 +23,6 @@ class Solution:
             segment.append(tmp)
             self.dfs(start + i, s, segment, res)
             segment.pop()
-
 
 
 if __name__ == '__main__':

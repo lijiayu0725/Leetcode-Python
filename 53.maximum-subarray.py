@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         dp = [0 for _ in range(len(nums))]
@@ -11,5 +12,5 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.maxSubArray([-2,1,-3,4,-1,2,1,-5,4])
+    res = solution.maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])
     print(res)

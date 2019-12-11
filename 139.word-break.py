@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         return self.helper(s, wordDict, {})
@@ -18,6 +19,7 @@ class Solution:
                 return True
         mem[s] = False
         return False
+
 
 if __name__ == '__main__':
     solution = Solution()

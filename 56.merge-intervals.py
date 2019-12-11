@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         if len(intervals) == 0:
@@ -11,7 +12,7 @@ class Solution:
         for nums in intervals[1:]:
             if nums[0] <= end and nums[1] >= end:
                 end = nums[1]
-            elif nums[0] >= start and nums[1]<= end:
+            elif nums[0] >= start and nums[1] <= end:
                 continue
             else:
                 res.append([start, end])
@@ -20,7 +21,8 @@ class Solution:
         res.append([start, end])
         return res
 
+
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.merge([[1,4],[2,3]])
+    res = solution.merge([[1, 4], [2, 3]])
     print(res)

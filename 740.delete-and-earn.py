@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def deleteAndEarn(self, nums: List[int]) -> int:
         if len(nums) == 0:

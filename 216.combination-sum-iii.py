@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         if k == 0 or n == 0:

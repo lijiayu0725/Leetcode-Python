@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         x_max = len(matrix)

@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         if digits is None or len(digits) == 0:
@@ -44,4 +45,3 @@ if __name__ == '__main__':
     solution = Solution()
     res = solution.letterCombinations('89')
     print(res)
-

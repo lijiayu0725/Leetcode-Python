@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def rob(self, nums: List[int]) -> int:
         if len(nums) == 0:
@@ -20,8 +21,7 @@ class Solution:
             return max(dp[-1][0], dp[-2][1])
 
 
-
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.rob([1,2,3,1])
+    res = solution.rob([1, 2, 3, 1])
     print(res)

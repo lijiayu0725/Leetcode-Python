@@ -19,6 +19,7 @@ class Solution:
             res.append(str(carry))
         return ''.join(reversed(res))
 
+
 if __name__ == '__main__':
     solution = Solution()
     res = solution.addBinary('0', '1')

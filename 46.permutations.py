@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         if len(nums) == 0:
@@ -24,5 +25,5 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.permute([1,2,3])
+    res = solution.permute([1, 2, 3])
     print(res)

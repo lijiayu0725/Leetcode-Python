@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
         dp = [[0] * (len(matrix[0]) + 1) for _ in range(len(matrix) + 1)]
@@ -12,10 +13,9 @@ class Solution:
         return max_dp ** 2
 
 
-
 if __name__ == '__main__':
     solution = Solution()
     res = solution.maximalSquare(
-        [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]])
+        [["1", "0", "1", "0", "0"], ["1", "0", "1", "1", "1"], ["1", "1", "1", "1", "1"], ["1", "0", "0", "1", "0"]])
 
     print(res)

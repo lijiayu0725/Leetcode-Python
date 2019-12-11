@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         if nums is None:
@@ -21,7 +22,8 @@ class Solution:
             return end
         return 0
 
+
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.searchInsert([-1,0,2,3,4], 0)
+    result = solution.searchInsert([-1, 0, 2, 3, 4], 0)
     print(result)

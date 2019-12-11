@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def findMin(self, nums: List[int]) -> int:
         if nums is None or len(nums) == 0:
@@ -10,7 +11,8 @@ class Solution:
                 min = num
         return min
 
+
 if __name__ == '__main__':
     solution = Solution()
-    result = solution.findMin([2,2,2,0,1])
+    result = solution.findMin([2, 2, 2, 0, 1])
     print(result)

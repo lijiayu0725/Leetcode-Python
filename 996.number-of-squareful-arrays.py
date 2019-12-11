@@ -1,5 +1,5 @@
-from typing import *
 import math
+from typing import *
 
 
 class Solution:
@@ -10,7 +10,6 @@ class Solution:
         res = []
         self.dfs(A, 0, [False] * len(A), [], res)
         return len(res)
-
 
     def dfs(self, A: List[int], depth: int, used: List[bool], cur: List[int], res: List[List[int]]):
         if depth == len(A):
@@ -27,7 +26,8 @@ class Solution:
                 used[i] = False
                 cur.pop()
 
+
 if __name__ == '__main__':
     solution = Solution()
-    res = solution.numSquarefulPerms([2,2,2])
+    res = solution.numSquarefulPerms([2, 2, 2])
     print(res)

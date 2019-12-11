@@ -1,6 +1,3 @@
-from typing import *
-
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -13,6 +10,7 @@ class TreeNode:
         self.val = x
         self.left = None
         self.right = None
+
 
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:

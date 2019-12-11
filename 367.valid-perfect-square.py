@@ -1,5 +1,3 @@
-from typing import *
-
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
         start, end = 0, num

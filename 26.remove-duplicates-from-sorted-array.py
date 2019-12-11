@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         slow, fast = 0, 1

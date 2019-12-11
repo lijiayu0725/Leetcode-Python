@@ -10,7 +10,6 @@ class Solution:
         return res
 
 
-
 if __name__ == '__main__':
     solution = Solution()
     res = solution.generate(2)
